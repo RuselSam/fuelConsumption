@@ -3,11 +3,12 @@ import java.util.Scanner;
 public class main {
     public static void main(String[] args) {
         Scanner scan=new Scanner(System.in);
-        System.out.print("Введите расход топлива: ");
-        double fuelConsumption=scan.nextDouble(); //consumption per 100 km
-        System.out.print("Введите объем бака: ");
+        System.out.print("Enter the amount of fuel available: ");
         double fuelVolume=scan.nextDouble(); //volume in liter
-        double distanceToEnd=fuelVolume/fuelConsumption;
-        System.out.println("Расстояние: "+distanceToEnd);
+        System.out.print("Fuel consumption: ");
+        double fuelConsumption=scan.nextDouble(); //consumption liter per 100 km
+        double distanceToEnd=(fuelVolume/fuelConsumption)*100;
+        int roundedValueDistanceToEnd=(int)distanceToEnd;
+        System.out.println("Distance: "+roundedValueDistanceToEnd);
     }
 }
